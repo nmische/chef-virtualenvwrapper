@@ -27,5 +27,5 @@ ruby_block "update_bashrc" do
         file.write_file
     end
   end
-  only_if node['virtualenvwrapper']['pip']['update_bashrc']
+  only_if { node['virtualenvwrapper']['pip']['update_bashrc'] }
 end
